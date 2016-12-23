@@ -34,6 +34,6 @@ Install the Zabbix Agent package.
 
 ## License and Author
 
-- Author:: Chris Duong (mailto:chrisduong83@gmail.com)).
+- Author:: cduong13 (mailto:chrisduong83@gmail.com)).
 
 This project is licensed under the MIT license.
