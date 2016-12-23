@@ -22,7 +22,7 @@ Installs and configures Zabbix Agent.
 
 The following attributes are set based on the platform, see the `attributes/default.rb` file for default values.
 
-- `node['zabbix_agent_lite']['version']` - version of Zabbix Agent to manage.
+- `node['zabbix_agent_lite']['version']` - version of Zabbix Agent to manage. Default is `3.2`.
 
 ## Recipes
 
