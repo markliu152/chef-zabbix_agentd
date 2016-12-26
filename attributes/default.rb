@@ -20,3 +20,19 @@ default['zabbix_agentd']['repo_rpm_url'] = {
     }
   }
 }
+
+default['zabbix_agentd']['hostname'] = node['fqdn']
+default['zabbix_agentd']['etc_dir'] = '/etc/zabbix'
+default['zabbix_agentd']['pid_dir'] = '/var/run/zabbix'
+default['zabbix_agentd']['log_dir'] = '/var/log/zabbix'
+default['zabbix_agentd']['include_dir'] =
+  "#{node['zabbix_agentd']['etc_dir']}/zabbix_agentd.d"
+default['zabbix_agentd']['listen_port'] = '10050'
+default['zabbix_agentd']['timeout'] = '3'
+
+default['zabbix_agentd']['servers'] = ['127.0.0.1']
+default['zabbix_agentd']['servers_active'] = ['127.0.0.1']
+default['zabbix_agentd']['debug_level'] = '3'
+default['zabbix_agentd']['enable_remote_command'] = nil
+default['zabbix_agentd']['start_agents'] = '3'
+default['zabbix_agentd']['logfile_size'] = '0'

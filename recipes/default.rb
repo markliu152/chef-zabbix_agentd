@@ -31,6 +31,17 @@ end
 
 package 'zabbix-agent'
 
+directory node['zabbix_agentd']['log_dir'] do
+  owner 'zabbix'
+  group 'zabbix'
+  recursive true
+end
+
+template "#{node['zabbix_agentd']['etc_dir']}/zabbix_agentd.conf" do
+  source 'zabbix_agentd.conf.erb'
+  notifies :restart, 'service[zabbix-agent]'
+end
+
 service 'zabbix-agent' do
   supports restart: true, status: true, reload: true
   action [:enable, :start]

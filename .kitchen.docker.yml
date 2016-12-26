@@ -49,3 +49,5 @@ suites:
     run_list:
       - recipe[zabbix_agentd::default]
     attributes:
+      zabbix_agentd:
+        hostname: 'Zabbix server'

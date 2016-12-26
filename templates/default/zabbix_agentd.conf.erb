@@ -3,13 +3,29 @@
 # Please refer to the Zabbix documentation for details on
 # configuration settings.
 
-# Basic minimum requirements
-HostName=<%= node['zabbix_agentd']['hostname'] %>
-LogFile=<%= node['zabbix_agentd']['log_dir'] %>/zabbix_agentd.log
-Servers=<%= node['zabbix_agentd']['servers'].join(',') %>
-<% if node['zabbix_agentd']['debug_level'] -%>
-DebugLevel=<%= node['zabbix_agentd']['debug_level'] %>
-<% end -%>
+PidFile=<%= node['zabbix_agentd']['pid_dir'] %>/zabbix_agentd.pid
 
-# You can include your custom config here
-Include=<%= node['zabbix_agentd']['include_dir'] %>/*.conf
+LogFile=<%= node['zabbix_agentd']['log_dir'] %>/zabbix_agentd.log
+
+LogFileSize=<%= node['zabbix_agentd']['logfile_size'] %>
+
+DebugLevel=<%= node['zabbix_agentd']['debug_level'] %>
+
+Server=<%= node['zabbix_agentd']['servers'].join(',') %>
+
+ListenPort=<%= node['zabbix_agentd']['listen_port'] %>
+
+ServerActive=<%= node['zabbix_agentd']['servers_active'].join(',') %>
+
+Hostname=<%= node['zabbix_agentd']['hostname'] %>
+
+<% if node['zabbix_agentd']['enable_remote_command'] %>
+EnableRemoteCommands=1
+LogRemoteCommands=1
+<% end %>
+
+Timeout=<%= node['zabbix_agentd']['timeout'] %>
+
+StartAgents=<%= node['zabbix_agentd']['start_agents'] %>
+
+Include=/etc/zabbix/zabbix_agentd.d/*.conf
