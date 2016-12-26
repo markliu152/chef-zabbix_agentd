@@ -4,7 +4,7 @@ maintainer_email 'chris.duong83@gmail.com'
 license 'mit'
 description 'Installs/Configures zabbix_agentd'
 long_description 'Installs/Configures zabbix_agentd'
-version '0.1.0'
+version '0.1.1'
 
 # If you upload to Supermarket you should set this so your cookbook
 # gets a `View Issues` link
