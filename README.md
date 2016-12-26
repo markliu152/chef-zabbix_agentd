@@ -1,4 +1,4 @@
-# zabbix_agent_lite cookbook
+# zabbix_agentd cookbook
 
 Installs and configures Zabbix Agent.
 
@@ -15,14 +15,11 @@ Installs and configures Zabbix Agent.
 
 ### Cookbooks
 
-- `apt`.
-- `yum`.
-
 ## Attributes
 
 The following attributes are set based on the platform, see the `attributes/default.rb` file for default values.
 
-- `node['zabbix_agent_lite']['version']` - version of Zabbix Agent to manage.
+- `node['zabbix_agentd']['version']` - version of Zabbix Agent to manage.
 
 ## Recipes
 

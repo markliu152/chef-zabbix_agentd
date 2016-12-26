@@ -19,7 +19,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[zabbix_agent_lite::default]
+      - recipe[zabbix_agentd::default]
     verifier:
       inspec_tests:
         - test/recipes

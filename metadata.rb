@@ -1,15 +1,15 @@
-name 'zabbix_agent_lite'
+name 'zabbix_agentd'
 maintainer 'cduong13'
 maintainer_email 'chris.duong83@gmail.com'
 license 'mit'
-description 'Installs/Configures zabbix_agent_lite'
-long_description 'Installs/Configures zabbix_agent_lite'
+description 'Installs/Configures zabbix_agentd'
+long_description 'Installs/Configures zabbix_agentd'
 version '0.1.0'
 
 # If you upload to Supermarket you should set this so your cookbook
 # gets a `View Issues` link
-# issues_url 'https://github.com/<insert_org_here>/zabbix_agent_lite/issues' if respond_to?(:issues_url)
+# issues_url 'https://github.com/<insert_org_here>/zabbix_agentd/issues' if respond_to?(:issues_url)
 
 # If you upload to Supermarket you should set this so your cookbook
 # gets a `View Source` link
-# source_url 'https://github.com/<insert_org_here>/zabbix_agent_lite' if respond_to?(:source_url)
+# source_url 'https://github.com/<insert_org_here>/zabbix_agentd' if respond_to?(:source_url)

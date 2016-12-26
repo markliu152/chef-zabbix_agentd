@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: zabbix_agent_lite
+# Cookbook Name:: zabbix_agentd
 # Spec:: default
 #
 # The MIT License (MIT)
@@ -27,7 +27,7 @@
 
 require 'spec_helper'
 
-describe 'zabbix_agent_lite::default' do
+describe 'zabbix_agentd::default' do
   context 'When all attributes are default, on an unspecified platform' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new
