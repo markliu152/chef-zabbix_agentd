@@ -24,4 +24,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-include_recipe 'zabbix_agent_lite::yum_repo'
+case node['platform']
+when 'centos', 'redhat'
+  include_recipe 'zabbix_agent_lite::yum_repo'
+end
+
+package 'zabbix-agent'
