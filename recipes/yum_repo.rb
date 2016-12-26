@@ -28,9 +28,9 @@ rpm_platform = node['platform']
 rpm_platform_version = node['platform_version'].to_f.to_i.to_s
 arch = node['kernel']['machine']
 
-zabbix_version = node['zabbix_agentd']['version']
-zabbix_release_rpm = node['zabbix_agentd']['repo_rpm_url'][zabbix_version][rpm_platform][rpm_platform_version][arch]['package']
-zabbix_release_url = node['zabbix_agentd']['repo_rpm_url'][zabbix_version][rpm_platform][rpm_platform_version][arch]['url']
+zabbix_release = node['zabbix_agentd']['version'].match(/\d*\.\d*/).to_s
+zabbix_release_rpm = node['zabbix_agentd']['repo_rpm_url'][zabbix_release][rpm_platform][rpm_platform_version][arch]['package']
+zabbix_release_url = node['zabbix_agentd']['repo_rpm_url'][zabbix_release][rpm_platform][rpm_platform_version][arch]['url']
 
 # Download the Zabbix repository RPM as a local file
 remote_file "#{Chef::Config[:file_cache_path]}/#{zabbix_release_rpm}" do
