@@ -37,3 +37,10 @@ remote_file "#{Chef::Config[:file_cache_path]}/#{zabbix_release_rpm}" do
   source "#{zabbix_release_url}/#{zabbix_release_rpm}"
   mode '0644'
 end
+
+# Install the Zabbix repository RPM from the local file
+package zabbix_release_rpm.to_s do
+  provider Chef::Provider::Package::Rpm
+  source "#{Chef::Config[:file_cache_path]}/#{zabbix_release_rpm}"
+  action :install
+end
