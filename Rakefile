@@ -1,6 +1,6 @@
 #!/usr/bin/env rake
 
-require_relative 'tasks/maintainers'
+# require_relative 'tasks/maintainers'
 
 # Style tests. cookstyle (rubocop) and Foodcritic
 namespace :style do
