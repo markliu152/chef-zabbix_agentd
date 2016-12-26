@@ -1,6 +1,6 @@
 # # encoding: utf-8
 
-# Inspec test for recipe zabbix_agent_lite::default
+# Inspec test for recipe zabbix_agentd::default
 
 # The Inspec reference, with examples and extensive documentation, can be
 # found at https://docs.chef.io/inspec_reference.html

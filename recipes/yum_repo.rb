@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: zabbix_agent_lite
+# Cookbook Name:: zabbix_agentd
 # Recipe:: yum_repo
 #
 # The MIT License (MIT)
@@ -28,9 +28,9 @@ rpm_platform = node['platform']
 rpm_platform_version = node['platform_version'].to_f.to_i.to_s
 arch = node['kernel']['machine']
 
-zabbix_version = node['zabbix_agent_lite']['version']
-zabbix_release_rpm = node['zabbix_agent_lite']['repo_rpm_url'][zabbix_version][rpm_platform][rpm_platform_version][arch]['package']
-zabbix_release_url = node['zabbix_agent_lite']['repo_rpm_url'][zabbix_version][rpm_platform][rpm_platform_version][arch]['url']
+zabbix_version = node['zabbix_agentd']['version']
+zabbix_release_rpm = node['zabbix_agentd']['repo_rpm_url'][zabbix_version][rpm_platform][rpm_platform_version][arch]['package']
+zabbix_release_url = node['zabbix_agentd']['repo_rpm_url'][zabbix_version][rpm_platform][rpm_platform_version][arch]['url']
 
 # Download the Zabbix repository RPM as a local file
 remote_file "#{Chef::Config[:file_cache_path]}/#{zabbix_release_rpm}" do

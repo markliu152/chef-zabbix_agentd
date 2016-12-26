@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: zabbix_agent_lite
+# Cookbook Name:: zabbix_agentd
 # Recipe:: default
 #
 # The MIT License (MIT)
@@ -26,7 +26,7 @@
 
 case node['platform']
 when 'centos', 'redhat'
-  include_recipe 'zabbix_agent_lite::yum_repo'
+  include_recipe 'zabbix_agentd::yum_repo'
 end
 
 package 'zabbix-agent'
