@@ -30,3 +30,8 @@ when 'centos', 'redhat'
 end
 
 package 'zabbix-agent'
+
+service 'zabbix-agent' do
+  supports restart: true, status: true, reload: true
+  action [:enable, :start]
+end
