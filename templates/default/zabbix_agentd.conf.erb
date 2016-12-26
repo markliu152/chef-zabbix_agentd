@@ -1,0 +1,15 @@
+# Zabbix Agent configuration file
+# This file was automatically generated and dropped off by chef!
+# Please refer to the Zabbix documentation for details on
+# configuration settings.
+
+# Basic minimum requirements
+HostName=<%= node['zabbix_agentd']['hostname'] %>
+LogFile=<%= node['zabbix_agentd']['log_dir'] %>/zabbix_agentd.log
+Servers=<%= node['zabbix_agentd']['servers'].join(',') %>
+<% if node['zabbix_agentd']['debug_level'] -%>
+DebugLevel=<%= node['zabbix_agentd']['debug_level'] %>
+<% end -%>
+
+# You can include your custom config here
+Include=<%= node['zabbix_agentd']['include_dir'] %>/*.conf
