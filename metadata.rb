@@ -13,3 +13,7 @@ issues_url 'https://github.com/chrisduong/chef-zabbix_agentd/issues' if respond_
 # If you upload to Supermarket you should set this so your cookbook
 # gets a `View Source` link
 source_url 'https://github.com/chrisduong/chef-zabbix_agentd' if respond_to?(:source_url)
+
+%w(redhat centos).each do |el|
+  supports el, '>= 6.0'
+end
