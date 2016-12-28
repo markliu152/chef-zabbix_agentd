@@ -8,69 +8,6 @@
 
 default['zabbix_agentd']['version'] = '3.2'
 
-default['zabbix_agentd']['repo_rpm_url'] = {
-  '3.2' => {
-    'centos' => {
-      '7' => {
-        'x86_64' => {
-          'url' => 'http://repo.zabbix.com/zabbix/3.2/rhel/7/x86_64/',
-          'package' => 'zabbix-release-3.2-1.el7.noarch.rpm'
-        }
-      },
-      '6' => {
-        'x86_64' => {
-          'url' => 'http://repo.zabbix.com/zabbix/3.2/rhel/6/x86_64/',
-          'package' => 'zabbix-release-3.2-1.el6.noarch.rpm'
-        }
-      }
-    },
-    'redhat' => {
-      '7' => {
-        'x86_64' => {
-          'url' => 'http://repo.zabbix.com/zabbix/3.2/rhel/7/x86_64/',
-          'package' => 'zabbix-release-3.2-1.el7.noarch.rpm'
-        }
-      },
-      '6' => {
-        'x86_64' => {
-          'url' => 'http://repo.zabbix.com/zabbix/3.2/rhel/6/x86_64/',
-          'package' => 'zabbix-release-3.2-1.el6.noarch.rpm'
-        }
-      }
-    }
-  },
-  '2.2' => {
-    'centos' => {
-      '7' => {
-        'x86_64' => {
-          'url' => 'http://repo.zabbix.com/zabbix/2.2/rhel/7/x86_64/',
-          'package' => 'zabbix-release-2.2-1.el7.noarch.rpm'
-        }
-      },
-      '6' => {
-        'x86_64' => {
-          'url' => 'http://repo.zabbix.com/zabbix/2.2/rhel/6/x86_64/',
-          'package' => 'zabbix-release-2.2-1.el6.noarch.rpm'
-        }
-      }
-    },
-    'redhat' => {
-      '7' => {
-        'x86_64' => {
-          'url' => 'http://repo.zabbix.com/zabbix/2.2/rhel/7/x86_64/',
-          'package' => 'zabbix-release-2.2-1.el7.noarch.rpm'
-        }
-      },
-      '6' => {
-        'x86_64' => {
-          'url' => 'http://repo.zabbix.com/zabbix/2.2/rhel/6/x86_64/',
-          'package' => 'zabbix-release-2.2-1.el6.noarch.rpm'
-        }
-      }
-    }
-  }
-}
-
 default['zabbix_agentd']['hostname'] = node['fqdn']
 default['zabbix_agentd']['etc_dir'] = '/etc/zabbix'
 default['zabbix_agentd']['pid_dir'] = '/var/run/zabbix'

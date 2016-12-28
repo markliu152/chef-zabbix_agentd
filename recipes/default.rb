@@ -27,6 +27,10 @@
 case node['platform']
 when 'centos', 'redhat'
   include_recipe 'zabbix_agentd::yum_repo'
+when 'ubuntu', 'debian'
+  include_recipe 'zabbix_agentd::apt_repo'
+else
+  Chef::Log.fatal!("Unsupported platform #{node['platform']}")
 end
 
 package 'zabbix-agent'
