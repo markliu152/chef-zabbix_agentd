@@ -17,3 +17,5 @@ source_url 'https://github.com/chrisduong/chef-zabbix_agentd' if respond_to?(:so
 %w(redhat centos).each do |el|
   supports el, '>= 6.0'
 end
+
+depends 'apt', '>= 2.9.1'
