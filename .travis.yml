@@ -1,4 +1,3 @@
-# NOTE: we used ChefDK so we are not stick to which Ruby version.
 sudo: required
 dist: trusty
 
