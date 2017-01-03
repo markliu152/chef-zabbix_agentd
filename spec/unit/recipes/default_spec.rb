@@ -24,13 +24,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-
 require 'spec_helper'
 
 describe 'zabbix_agentd::default' do
-  context 'When all attributes are default, on an unspecified platform' do
+  context 'When all attributes are default, on an unspecified platform (happens to be ubuntu)' do
     let(:chef_run) do
-      runner = ChefSpec::ServerRunner.new
+      runner = ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '16.04')
       runner.converge(described_recipe)
     end
 
