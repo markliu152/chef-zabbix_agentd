@@ -66,5 +66,5 @@ suites:
       - recipe[zabbix_agentd::default]
     attributes:
       zabbix_agentd:
-        version: '2.2.1'
+        version: '3.2'
         hostname: 'Zabbix server'
