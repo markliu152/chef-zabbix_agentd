@@ -5,7 +5,7 @@ dist: trusty
 addons:
   apt:
     sources:
-      - chef-current-trusty
+      - chef-stable-trusty
     packages:
       - chefdk
 
@@ -26,6 +26,7 @@ env:
   - INSTANCE=default-ubuntu-1604
 
 # NOTE: put before_script at one place, outside of matrix include
+# TODO: Why before_script does not print out anything
 before_script:
   - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
   - eval "$(/opt/chefdk/bin/chef shell-init bash)"
