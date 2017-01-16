@@ -4,7 +4,7 @@ This file is used to list changes made in each version of the Zabbix Agent cookb
 
 ## v0.2.0
 
-- Support install type `build from source`.
+- Support install type `build from source`. Copy from: https://github.com/TD-4242/zabbix-agent
 
 ## v0.1.1
 - Support Zabbix Version 2.x.
